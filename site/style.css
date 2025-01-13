@@ -1,0 +1,178 @@
+html {
+    background-color: #131516;
+    color: #d8d4cf;
+}
+
+body {
+    font-family: "Noto Serif Display Bold", Arial, sans-serif;
+    margin: 0;
+    height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: "Arcane Nine";
+    text-align: center;
+    margin: 0;
+}
+
+a {
+    color: #d8d4cf;
+}
+
+a:hover {
+    filter: opacity(50%);
+}
+
+.container {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80%;
+}
+
+.gradient {
+    color: #a1afd6;
+    background: linear-gradient(#2a426e, #f4fcff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.digit {
+    font-family: "Arcane Nine";
+    font-size: 5rem;
+    text-align: center;
+}
+
+.place-desc {
+    font-family: "Noto Serif Display Bold";
+    text-align: center;
+    font-size: 1rem;
+}
+
+.timer-place {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.timer-place:has(#seconds-digit) {
+    min-width: 7rem;
+    margin-left: 0rem;
+}
+
+.timer-place:has(#minutes-digit) {
+    min-width: 4rem;
+    margin-left: 1rem;
+}
+
+#header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#releases-text {
+    font-family: "Noto Serif Display Light";
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+#released-text {
+    font-family: "Noto Serif Display Bold";
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#watch-button {
+    font-family: "Arcane Nine";
+    font-size: 2.25rem;
+    margin: 1rem;
+    width: fit-content;
+    text-align: center;
+    border: 3px solid #a1afd6;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+#watch-button:hover {
+    cursor: pointer;
+}
+
+#watch-button:active {
+    transform: scale(0.98);
+}
+
+#timer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 500px;
+}
+
+@media screen and (min-width: 800px) {
+    #header-container {
+        flex-direction: row;
+    }
+
+    .header-text-field {
+        margin: 1rem;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    .digit {
+        font-size: 10rem;
+    }
+
+    .place-desc {
+        font-size: 1.5rem;
+    }
+
+    .timer-place:has(#seconds-digit) {
+        min-width: 12.7rem;
+        margin-left: 0rem;
+    }
+
+    .timer-place:has(#minutes-digit) {
+        min-width: 11rem;
+        margin-left: 1rem;
+    }
+
+    .timer-place {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    #timer-container {
+        max-width: 1500px;
+    }
+
+    #releases-text {
+        font-size: 2rem;
+    }
+}
